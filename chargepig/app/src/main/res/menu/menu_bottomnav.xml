@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/select_home"
+        android:enabled="true"
+        android:checkable="true"
+        app:showAsAction="always"
+        android:title="홈"/>
+
+    <item
+        android:id="@+id/mapFragment"
+        android:icon="@drawable/select_map"
+        android:enabled="true"
+        android:checkable="true"
+        android:title="지도"/>
+
+    <item
+        android:id="@+id/menu_placeholder"
+        android:title=""
+        android:enabled="false"
+        android:checkable="false"
+        />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/select_profile"
+        android:enabled="true"
+        android:checkable="true"
+        android:title="내 정보"/>
+
+    <item
+        android:id="@+id/serviceFragment"
+        android:icon="@drawable/select_service"
+        android:enabled="true"
+        android:checkable="true"
+        android:title="고객센터"/>
+
+
+</menu>
