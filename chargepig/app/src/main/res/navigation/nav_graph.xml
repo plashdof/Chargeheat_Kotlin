@@ -9,15 +9,7 @@
         android:name="com.week2.chargepig.HomeFragment"
         android:label="HomeFragment" />
     <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.week2.chargepig.MapFragment"
-        android:label="MapFragment" />
-    <fragment
         android:id="@+id/profileFragment"
         android:name="com.week2.chargepig.ProfileFragment"
         android:label="ProfileFragment" />
-    <fragment
-        android:id="@+id/serviceFragment"
-        android:name="com.week2.chargepig.ServiceFragment"
-        android:label="ServiceFragment" />
 </navigation>
