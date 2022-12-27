@@ -1,16 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <ImageView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:src="@drawable/flashlight"/>-->
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="APP NAME"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/btn_logout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/exit"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@color/black"
+            android:text="에코\n포인트"
+            android:textStyle="bold"
+            android:backgroundTint="@color/lightgreen"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:backgroundTint="@color/lightgreen"
+            android:text="손난로찾기"
+            android:textSize="20sp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="내 에코 포인트"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:scaleY="3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="80dp"
+        android:progress="90"
+        android:progressTint="@color/green"
+        android:progressBackgroundTint="@color/lightgreen"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90 / 100"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/green"
+        android:textStyle="bold"/>
+
+
+
+
+</LinearLayout>
