@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.main_frag) as NavHostFragment
         val navController = navHostFragment.navController
 
+        val bottomnav = binding.mainBottomnav
+        bottomnav.itemIconTintList = null
+
 
         binding.mainBottomnav.setupWithNavController(navController)
 
