@@ -7,11 +7,15 @@
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/drawable/select_map.xml" value="0.1235" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/drawable/select_profile.xml" value="0.1235" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/drawable/select_service.xml" value="0.1235" />
+        <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/activity_custom_scanner.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/activity_qr.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/custom_barcode_scanner.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/fragment_home.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/fragment_map.xml" value="0.20811965811965813" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/fragment_profile.xml" value="0.189453125" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/fragment_service.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/layout/view_qrcode.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/SAMSUNG/Desktop/chhargepig/ChargepigClone_kotlin/chargepig/app/src/main/res/menu/menu_bottomnav.xml" value="0.1" />
       </map>
     </option>

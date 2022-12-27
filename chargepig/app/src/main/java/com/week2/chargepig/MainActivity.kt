@@ -3,6 +3,7 @@ package com.week2.chargepig
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             integrator.setCameraId(0) // 0은 후면 카메라, 1은 전면 카메라
             integrator.setBeepEnabled(true) // 바코드를 인식했을 때 삑 소리유무
             integrator.setBarcodeImageEnabled(false) // 스캔 했을 때 스캔한 이미지 사용여부
+            integrator.captureActivity = QrActivity::class.java
             integrator.initiateScan() // 스캔
         }
 
@@ -45,6 +47,24 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "${result.contents}", Toast.LENGTH_SHORT).show()
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+
+        if (result != null) {
+            if (result.contents != null) {
+                Log.e("INFO: ", "${result.contents}")
+            } else {
+                Toast.makeText(this, "Canceled", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+
+
+
 
 
 
