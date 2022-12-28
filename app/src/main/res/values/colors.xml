@@ -7,4 +7,5 @@
     <color name="lightgreen">#33b82c</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="skin">#f6fafd</color>
 </resources>

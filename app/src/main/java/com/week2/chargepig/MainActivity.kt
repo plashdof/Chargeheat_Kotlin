@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.NavHostFragment
@@ -30,6 +31,18 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.mainBottomnav.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _,destination,_ ->
+            if(destination.id == R.id.homeFragment || destination.id == R.id.profileFragment){
+                binding.bottomAppBar.visibility = View.VISIBLE
+                binding.mainBtnQr.visibility = View.VISIBLE
+            }else{
+                binding.bottomAppBar.visibility = View.GONE
+                binding.mainBtnQr.visibility = View.GONE
+            }
+
+        }
+
 
         binding.mainBtnQr.setOnClickListener {
 

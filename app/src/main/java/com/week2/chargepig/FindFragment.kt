@@ -7,27 +7,27 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.week2.chargepig.databinding.FragmentHomeBinding
+import com.week2.chargepig.databinding.FragmentFindBinding
 
-class HomeFragment : Fragment(){
-    private lateinit var binding : FragmentHomeBinding
+class FindFragment : Fragment() {
+
+    private lateinit var binding : FragmentFindBinding
     private lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = FragmentFindBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         navController = Navigation.findNavController(view)
 
-        binding.btnFind.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_findFragment)
+        binding.btn.setOnClickListener {
+            navController.navigate(R.id.action_findFragment_to_homeFragment)
         }
     }
 }
