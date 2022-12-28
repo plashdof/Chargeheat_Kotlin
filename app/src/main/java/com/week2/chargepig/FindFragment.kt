@@ -26,7 +26,7 @@ class FindFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
 
-        binding.btn.setOnClickListener {
+        binding.btnBack.setOnClickListener {
             navController.navigate(R.id.action_findFragment_to_homeFragment)
         }
     }

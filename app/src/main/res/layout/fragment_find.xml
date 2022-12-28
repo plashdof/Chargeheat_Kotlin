@@ -1,20 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="test"
-        android:backgroundTint="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp">
+
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:src="@drawable/example"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="horizontal"
+            android:columnCount="2">
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_margin="50dp"
+                android:src="@drawable/warmer_off"/>
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_margin="50dp"
+                android:src="@drawable/warmer_on"/>
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_margin="50dp"
+                android:src="@drawable/warmer_on"/>
+
+            <ImageView
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_margin="50dp"
+                android:src="@drawable/warmer_off"/>
+
+        </GridLayout>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+
+
+</LinearLayout>
