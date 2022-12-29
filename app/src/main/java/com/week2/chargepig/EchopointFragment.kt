@@ -7,34 +7,29 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.week2.chargepig.databinding.FragmentHomeBinding
+import com.week2.chargepig.databinding.FragmentEchopointBinding
 
-class HomeFragment : Fragment(){
-    private lateinit var binding : FragmentHomeBinding
+class EchopointFragment : Fragment() {
+
+    private lateinit var binding : FragmentEchopointBinding
     private lateinit var navController: NavController
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = FragmentEchopointBinding.inflate(inflater, container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         navController = Navigation.findNavController(view)
 
-        binding.btnFind.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_findFragment)
-        }
+        binding.btnHome.setOnClickListener {
+            navController.navigate(R.id.action_echopointFragment_to_homeFragment)
 
-        binding.btnEchopoint.setOnClickListener {
-            navController.navigate(R.id.action_homeFragment_to_echopointFragment)
         }
-
     }
-
-
 }

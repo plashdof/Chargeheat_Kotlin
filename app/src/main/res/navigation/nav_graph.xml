@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_homeFragment_to_findFragment"
             app:destination="@id/findFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_echopointFragment"
+            app:destination="@id/echopointFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -25,7 +28,11 @@
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/successFragment"
-        android:name="com.week2.chargepig.SuccessActivity"
-        android:label="SuccessFragment" />
+        android:id="@+id/echopointFragment"
+        android:name="com.week2.chargepig.EchopointFragment"
+        android:label="EchopointFragment" >
+        <action
+            android:id="@+id/action_echopointFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
