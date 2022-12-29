@@ -29,5 +29,8 @@ class HomeFragment : Fragment(){
         binding.btnFind.setOnClickListener {
             navController.navigate(R.id.action_homeFragment_to_findFragment)
         }
+
     }
+
+
 }

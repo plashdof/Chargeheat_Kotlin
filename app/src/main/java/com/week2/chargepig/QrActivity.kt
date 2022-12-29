@@ -1,5 +1,6 @@
 package com.week2.chargepig
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,11 @@ class QrActivity : AppCompatActivity() {
                 barcodeView.setTorchOn()
                 flashstate = true
             }
+        }
+
+        binding.btnNumber.setOnClickListener {
+            val intent = Intent(this, NumberinputActivity::class.java)
+            startActivity(intent)
         }
 
     }

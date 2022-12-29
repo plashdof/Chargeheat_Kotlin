@@ -69,6 +69,9 @@ class MainActivity : AppCompatActivity() {
             if(intentResult.contents != null){
                 //QRCode Scan result 있는경우
                 Toast.makeText(this@MainActivity, "인식된 QR-data: ${intentResult.contents}", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, SuccessActivity::class.java)
+                startActivity(intent)
             }else{
                 //QRCode Scan result 없는경우
                 Toast.makeText(this@MainActivity, "인식된 QR-data가 없습니다.", Toast.LENGTH_SHORT).show()

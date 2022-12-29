@@ -30,8 +30,14 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
+
+        <activity
+            android:name=".SuccessActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".NumberinputActivity"
+            android:exported="true"/>
 
         <activity
             android:name=".QrActivity"

@@ -107,7 +107,4 @@
         android:textColor="@color/green"
         android:textStyle="bold"/>
 
-
-
-
 </LinearLayout>
