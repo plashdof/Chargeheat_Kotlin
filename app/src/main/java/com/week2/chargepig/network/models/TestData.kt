@@ -1,4 +1,4 @@
-package com.week2.chargepig.models
+package com.week2.chargepig.network.models
 
 import com.google.gson.annotations.SerializedName
 

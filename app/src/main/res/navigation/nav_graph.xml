@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.week2.chargepig.HomeFragment"
+        android:name="com.week2.chargepig.view.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_findFragment"
@@ -17,11 +17,11 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.week2.chargepig.ProfileFragment"
+        android:name="com.week2.chargepig.view.ProfileFragment"
         android:label="ProfileFragment" />
     <fragment
         android:id="@+id/findFragment"
-        android:name="com.week2.chargepig.FindFragment"
+        android:name="com.week2.chargepig.view.FindFragment"
         android:label="FindFragment" >
         <action
             android:id="@+id/action_findFragment_to_homeFragment"
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/echopointFragment"
-        android:name="com.week2.chargepig.EchopointFragment"
+        android:name="com.week2.chargepig.view.echoPoint.EchopointFragment"
         android:label="EchopointFragment" >
         <action
             android:id="@+id/action_echopointFragment_to_homeFragment"

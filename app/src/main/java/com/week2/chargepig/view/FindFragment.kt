@@ -1,4 +1,4 @@
-package com.week2.chargepig
+package com.week2.chargepig.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,19 +7,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.week2.chargepig.databinding.FragmentEchopointBinding
+import com.week2.chargepig.R
+import com.week2.chargepig.databinding.FragmentFindBinding
 
-class EchopointFragment : Fragment() {
+class FindFragment : Fragment() {
 
-    private lateinit var binding : FragmentEchopointBinding
+    private lateinit var binding : FragmentFindBinding
     private lateinit var navController: NavController
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentEchopointBinding.inflate(inflater, container,false)
+        binding = FragmentFindBinding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -27,9 +27,8 @@ class EchopointFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
 
-        binding.btnHome.setOnClickListener {
-            navController.navigate(R.id.action_echopointFragment_to_homeFragment)
-
+        binding.btnBack.setOnClickListener {
+            navController.navigate(R.id.action_findFragment_to_homeFragment)
         }
     }
 }

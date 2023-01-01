@@ -1,6 +1,6 @@
-package com.week2.chargepig.retrofit
+package com.week2.chargepig.network
 
-import com.week2.chargepig.models.TestData
+import com.week2.chargepig.network.models.TestData
 import retrofit2.Call
 import retrofit2.http.GET
 

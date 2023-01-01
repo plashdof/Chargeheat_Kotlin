@@ -1,4 +1,4 @@
-package com.week2.chargepig
+package com.week2.chargepig.view.qr
 
 import android.content.Intent
 import android.os.Bundle

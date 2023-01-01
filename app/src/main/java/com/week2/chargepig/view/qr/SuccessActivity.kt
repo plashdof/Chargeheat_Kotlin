@@ -1,8 +1,9 @@
-package com.week2.chargepig
+package com.week2.chargepig.view.qr
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.week2.chargepig.MainActivity
 import com.week2.chargepig.databinding.ActivitySuccessBinding
 
 class SuccessActivity : AppCompatActivity() {

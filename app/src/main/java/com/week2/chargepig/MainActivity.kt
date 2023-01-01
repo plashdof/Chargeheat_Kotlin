@@ -3,7 +3,6 @@ package com.week2.chargepig
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -11,8 +10,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.zxing.integration.android.IntentIntegrator
 import com.google.zxing.integration.android.IntentResult
-import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
+import com.week2.chargepig.view.qr.QrActivity
+import com.week2.chargepig.view.qr.SuccessActivity
 import com.week2.chargepig.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

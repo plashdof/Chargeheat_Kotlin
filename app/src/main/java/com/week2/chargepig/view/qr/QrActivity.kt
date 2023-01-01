@@ -1,11 +1,9 @@
-package com.week2.chargepig
+package com.week2.chargepig.view.qr
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.journeyapps.barcodescanner.CaptureManager
-import com.journeyapps.barcodescanner.DecoratedBarcodeView
 import com.week2.chargepig.databinding.ActivityQrBinding
 
 class QrActivity : AppCompatActivity() {

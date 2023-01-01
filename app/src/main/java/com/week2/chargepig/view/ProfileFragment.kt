@@ -1,4 +1,4 @@
-package com.week2.chargepig
+package com.week2.chargepig.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
