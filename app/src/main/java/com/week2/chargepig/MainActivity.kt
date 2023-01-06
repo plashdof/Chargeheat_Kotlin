@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 binding.bottomAppBar.visibility = View.GONE
                 binding.mainBtnQr.visibility = View.GONE
             }
-
         }
 
 

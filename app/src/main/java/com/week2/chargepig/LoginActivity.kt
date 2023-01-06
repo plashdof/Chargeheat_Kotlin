@@ -12,6 +12,9 @@ import com.week2.chargepig.network.TestAPI
 import com.week2.chargepig.network.models.LoginData
 import com.week2.chargepig.network.models.ResponseData
 import com.week2.chargepig.network.models.TestData
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +22,10 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity(){
 
     private lateinit var binding : ActivityLoginBinding
+
+    private val TestRetro = Retrofit.getInstance().create(TestAPI::class.java)
+    private val LoginRetro = Retrofit.getInstance().create(LoginAPI::class.java)
+
     var ID = 0
     var PW = ""
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,38 +57,35 @@ class LoginActivity : AppCompatActivity(){
         binding.btnLogin.setOnClickListener {
 
             var data = LoginData(ID,PW)
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
 
+            CoroutineScope(Dispatchers.IO).launch{
+                val TestResult = TestRetro.helloworld()
+
+                Log.d("aaaaa", "${TestResult.toString()}")
+                val LoginResult = LoginRetro.login(TestResult)
+
+                Log.d("aaaaa", "${LoginResult.toString()}")
+            }
+
+
+
+//            Log.d("API결과","${data.id}, ${data.password}")
 //            Retrofit.buildLikeRetro
-//                .create(TestAPI::class.java)
-//                .helloworld()
-//                .enqueue(object: Callback<TestData> {
+//                .create(LoginAPI::class.java)
+//                .login(data)
+//                .enqueue(object: Callback<ResponseData> {
 //                    override fun onResponse(
-//                        call: Call<TestData>,
-//                        response: Response<TestData>
+//                        call: Call<ResponseData>,
+//                        response: Response<ResponseData>
 //                    ) {
 //                        Log.d("API결과","${response.body()}")
 //                    }
-//                    override fun onFailure(call: Call<TestData>, t: Throwable) {
+//                    override fun onFailure(call: Call<ResponseData>, t: Throwable) {
 //                        Log.d("API결과", "실패 : $t")
 //                    }
 //                })
-
-
-            Log.d("API결과","${data.userId}, ${data.userPwd}")
-            Retrofit.buildLikeRetro
-                .create(LoginAPI::class.java)
-                .login(data)
-                .enqueue(object: Callback<ResponseData> {
-                    override fun onResponse(
-                        call: Call<ResponseData>,
-                        response: Response<ResponseData>
-                    ) {
-                        Log.d("API결과","${response.body()}")
-                    }
-                    override fun onFailure(call: Call<ResponseData>, t: Throwable) {
-                        Log.d("API결과", "실패 : $t")
-                    }
-                })
         }
 
     }
