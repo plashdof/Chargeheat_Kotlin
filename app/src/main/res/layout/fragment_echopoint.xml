@@ -23,39 +23,58 @@
 
 
     <Button
+        android:id="@+id/btn_tumbler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="number1"
+        android:text="텀블러 사용하기"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/lightgreen"/>
+        android:backgroundTint="@color/poscoblue"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="number2"
+        android:text="전자영수증 사용하기"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/lightgreen"/>
+        android:backgroundTint="@color/poscoblue"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="number3"
+        android:text="대중교통 이용하기"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/lightgreen"/>
+        android:backgroundTint="@color/poscoblue"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="number4"
+        android:text="모니터 밝기 줄이기"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
-        android:backgroundTint="@color/lightgreen"/>
+        android:backgroundTint="@color/poscoblue"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="무공해차 인증하기"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/poscoblue"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="에너지효율 인증하기"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/poscoblue"/>
 
 
 </LinearLayout>

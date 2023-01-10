@@ -49,10 +49,11 @@
             android:id="@+id/btn_echopoint"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="에코\n포인트"
             android:textStyle="bold"
-            android:backgroundTint="@color/lightgreen"
+            android:alpha="0.7"
+            android:backgroundTint="@color/poscoblue"
             android:textSize="20sp"/>
 
         <View
@@ -64,9 +65,10 @@
             android:id="@+id/btn_find"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:backgroundTint="@color/lightgreen"
+            android:alpha="0.7"
+            android:backgroundTint="@color/poscoblue"
             android:text="손난로찾기"
             android:textSize="20sp"/>
 
@@ -96,15 +98,15 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="80dp"
         android:progress="90"
-        android:progressTint="@color/green"
-        android:progressBackgroundTint="@color/lightgreen"/>
+        android:progressTint="@color/poscoblue"
+        android:progressBackgroundTint="@color/poscoblue"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="90 / 100"
         android:layout_marginLeft="40dp"
-        android:textColor="@color/green"
+        android:textColor="@color/poscoblue"
         android:textStyle="bold"/>
 
 </LinearLayout>

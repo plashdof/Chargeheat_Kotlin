@@ -54,20 +54,25 @@ class LoginActivity : AppCompatActivity(){
             override fun afterTextChanged(p0: Editable?) {}
         })
 
+        binding.btnSignup.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnLogin.setOnClickListener {
 
             var data = LoginData(ID,PW)
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
 
-            CoroutineScope(Dispatchers.IO).launch{
-                val TestResult = TestRetro.helloworld()
-
-                Log.d("aaaaa", "${TestResult.toString()}")
-                val LoginResult = LoginRetro.login(TestResult)
-
-                Log.d("aaaaa", "${LoginResult.toString()}")
-            }
+//            CoroutineScope(Dispatchers.IO).launch{
+//                val TestResult = TestRetro.helloworld()
+//
+//                Log.d("aaaaa", "${TestResult.toString()}")
+//                val LoginResult = LoginRetro.login(TestResult)
+//
+//                Log.d("aaaaa", "${LoginResult.toString()}")
+//            }
 
 
 

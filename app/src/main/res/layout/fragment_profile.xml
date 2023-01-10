@@ -58,11 +58,12 @@
                     android:src="@drawable/profile_off" />
 
                 <TextView
-                    android:id="@+id/tv_name"
+                    android:id="@+id/tv_head_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:text="박진성"
+                    android:textColor="@color/poscoblue"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
@@ -70,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
+                    android:textColor="@color/poscoblue"
                     android:text="님 환영합니다 !"
                     android:textSize="17sp" />
 
@@ -94,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="내 정보"
-                    android:textColor="@color/black"
+                    android:textColor="@color/poscoblue"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
@@ -107,7 +109,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="아이디"
+                        android:text="아이디 / 사번"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -146,6 +148,30 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이름"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="박진성"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
@@ -168,7 +194,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="에코 포인트"
-                    android:textColor="@color/black"
+                    android:textColor="@color/poscoblue"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
@@ -265,8 +291,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="에코 포인트"
-                    android:textColor="@color/black"
+                    android:text="주민정보"
+                    android:textColor="@color/poscoblue"
                     android:textSize="17sp"
                     android:textStyle="bold" />
 
@@ -279,15 +305,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="보유 포인트"
+                        android:text="동"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
                     <TextView
+                        android:id="@+id/tv_dong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
-                        android:text="30P"
+                        android:text="11동"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -302,42 +329,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="최근 적립"
+                        android:text="호수"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
                     <TextView
+                        android:id="@+id/tv_hosu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
-                        android:text="5P"
+                        android:text="103호"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="최대 적립"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:text="15P"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
