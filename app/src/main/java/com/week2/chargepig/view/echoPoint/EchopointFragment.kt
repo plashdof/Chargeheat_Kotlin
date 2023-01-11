@@ -19,7 +19,10 @@ import androidx.navigation.Navigation
 import com.week2.chargepig.Image
 import com.week2.chargepig.MainActivity
 import com.week2.chargepig.R
+import com.week2.chargepig.Retrofit
 import com.week2.chargepig.databinding.FragmentEchopointBinding
+import com.week2.chargepig.network.EchopointAPI
+import com.week2.chargepig.network.LoginAPI
 import java.text.SimpleDateFormat
 
 class EchopointFragment : Fragment() {
@@ -48,6 +51,7 @@ class EchopointFragment : Fragment() {
         }
 
         binding.btnTumbler.setOnClickListener {
+            Image.name = "Tumbler"
             openCamera()
         }
     }
