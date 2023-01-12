@@ -1,11 +1,16 @@
 package com.week2.chargepig.view.echoPoint
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Base64
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.week2.chargepig.App
 import com.week2.chargepig.Retrofit
 import com.week2.chargepig.Singleton
 import com.week2.chargepig.databinding.FragmentSendadminBinding
@@ -15,6 +20,8 @@ import com.week2.chargepig.network.models.ResponseData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.io.ByteArrayOutputStream
+import java.util.Base64.getEncoder
 
 
 class SendadminFragment : Fragment() {
@@ -39,12 +46,26 @@ class SendadminFragment : Fragment() {
         binding.ivBackground.setImageURI(Singleton.image)
         binding.btnComplete.setOnClickListener {
 
-            val datas = EchopointData(Singleton.name, Singleton.image.toString())
 
+            val byteArrayOutputStream = ByteArrayOutputStream()
+
+            // uri 을 bitmap 으로 변환
+            val bitmap = MediaStore.Images.Media.getBitmap(App.context().contentResolver, Singleton.image)
+            
+            // bitmap 사이즈 줄이기
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream)
+            
+            // bitmap 을 bytearray로 변환
+            val imageBytes: ByteArray = byteArrayOutputStream.toByteArray()
+
+            // base64 string 으로 변환
+            val imageString: String = Base64.encodeToString(imageBytes, Base64.DEFAULT)
+
+            val datas = EchopointData(Singleton.name, imageString)
 
             Log.d("aaaaa","${datas.toString()}")
             Log.d("aaaaa","${Singleton.id}")
-            EchopointRetro.echopoint(Singleton.id, datas)
+            EchopointRetro.echopoint("1234", datas)
                 .enqueue(object : Callback<ResponseData> {
                     override fun onResponse(
                         call: Call<ResponseData>,
@@ -60,6 +81,13 @@ class SendadminFragment : Fragment() {
         }
 
 
+    }
+
+
+    fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
+        var outputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 80, outputStream)
+        return outputStream.toByteArray()
     }
 
 

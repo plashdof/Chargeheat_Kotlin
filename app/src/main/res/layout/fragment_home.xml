@@ -143,6 +143,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageButton
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/home_findbackground"/>
@@ -236,6 +237,7 @@
             </LinearLayout>
 
             <ImageButton
+                android:id="@+id/btn_bluetooth"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"

@@ -57,14 +57,19 @@ class HomeFragment : Fragment(){
             navController.navigate(R.id.action_homeFragment_to_echopointFragment)
         }
 
-        ProfileRetro.getprofile(Singleton.id)
-            .enqueue(object: Callback<ProfileData>{
-                override fun onResponse(call: Call<ProfileData>, response: Response<ProfileData>) {
-                    binding.tvEchopoint.text = "${response.body()!!.point.toString()}P"
-                }
+        binding.btnBluetooth.setOnClickListener {
+            val intent = Intent(App.context(), BluetoothActivity::class.java)
+            startActivity(intent)
+        }
 
-                override fun onFailure(call: Call<ProfileData>, t: Throwable) {}
-            })
+//        ProfileRetro.getprofile(Singleton.id)
+//            .enqueue(object: Callback<ProfileData>{
+//                override fun onResponse(call: Call<ProfileData>, response: Response<ProfileData>) {
+//                    binding.tvEchopoint.text = "${response.body()!!.point.toString()}P"
+//                }
+//
+//                override fun onFailure(call: Call<ProfileData>, t: Throwable) {}
+//            })
 
         binding.btnQr.setOnClickListener {
 
