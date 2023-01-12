@@ -21,7 +21,8 @@
 
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/ModalTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +32,9 @@
         
         <activity
             android:name=".SignupActivity"
-            android:exported="true"/>
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan|adjustUnspecified"
+            android:theme="@style/ModalTheme"/>
 
         <activity
             android:name=".MainActivity"

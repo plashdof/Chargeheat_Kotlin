@@ -9,9 +9,8 @@ import retrofit2.http.POST
 
 interface SignupAPI {
 
-    @POST("/signup")
+    @POST("/user/join")
     fun signup(
         @Body params : SignupData
     ): Call<ResponseData>
-
 }

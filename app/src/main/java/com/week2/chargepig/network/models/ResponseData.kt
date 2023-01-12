@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 data class ResponseData(
     @SerializedName("code") val code : Int,
-    @SerializedName("message") val message : String
+    @SerializedName("message") val msg : String
 )

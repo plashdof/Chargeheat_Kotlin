@@ -5,7 +5,8 @@ import com.google.gson.annotations.SerializedName
 
 data class EchopointData(
 
-    @SerializedName("photo") val photo : Uri,
-    @SerializedName("name") val name : String
+    @SerializedName("photo") val photo : String,
+    @SerializedName("name") val name : String,
+    @SerializedName("id") val id : String
 
 )

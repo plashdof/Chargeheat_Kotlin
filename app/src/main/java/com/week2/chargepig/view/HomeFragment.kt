@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.week2.chargepig.R
@@ -43,6 +44,34 @@ class HomeFragment : Fragment(){
         val adapter = HomeVPAdapter(datas)
         binding.viewpager.adapter = adapter
 
+        // indicator 생성, viewpager 과 연결
+
+        val indicator = binding.indicator
+        indicator.noOfPages = 3
+
+        binding.viewpager.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
+
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+                super.onPageScrollStateChanged(state)
+            }
+
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                indicator.onPageChange(position)
+            }
+
+
+
+
+        })
 
 
     }

@@ -9,7 +9,7 @@ import retrofit2.http.POST
 
 interface EchopointAPI {
 
-    @POST("/echopoint")
+    @POST("/eco")
     fun echopoint(
         @Body params : EchopointData
     ): Call<ResponseData>

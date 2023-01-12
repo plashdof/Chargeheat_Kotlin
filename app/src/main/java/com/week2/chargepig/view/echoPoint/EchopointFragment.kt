@@ -1,28 +1,29 @@
 package com.week2.chargepig.view.echoPoint
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.os.bundleOf
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResult
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import com.week2.chargepig.Image
+import com.week2.chargepig.Singleton
 import com.week2.chargepig.MainActivity
 import com.week2.chargepig.R
-import com.week2.chargepig.Retrofit
 import com.week2.chargepig.databinding.FragmentEchopointBinding
-import com.week2.chargepig.network.EchopointAPI
-import com.week2.chargepig.network.LoginAPI
+import java.io.File
 import java.text.SimpleDateFormat
 
 class EchopointFragment : Fragment() {
@@ -32,6 +33,7 @@ class EchopointFragment : Fragment() {
 
     var realUri : Uri? = null
     var state = true
+    private var imagePath = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,7 +53,7 @@ class EchopointFragment : Fragment() {
         }
 
         binding.btnTumbler.setOnClickListener {
-            Image.name = "Tumbler"
+            Singleton.name = "Tumbler"
             openCamera()
         }
     }
@@ -60,6 +62,8 @@ class EchopointFragment : Fragment() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         state = false
         Log.d("aaaaaa","openCamera")
+        var imgFile = createImageFile()
+        Log.d("aaaaaa","${imgFile.toString()}")
 
         createImageUri(newFileName(), "image/jpg")?.let { uri ->
             realUri = uri
@@ -70,6 +74,17 @@ class EchopointFragment : Fragment() {
                 childForResult.launch(it)
             }
         }
+    }
+
+    private fun createImageFile(): File {
+        // 사진이 저장될 폴더 있는지 체크
+        var file = File(Environment.getExternalStorageDirectory(), "/path/")
+        if (!file.exists()) file.mkdir()
+
+        var imageName = "fileName.jpeg"
+        var imageFile = File("${Environment.getExternalStorageDirectory().absoluteFile}/path/", "$imageName")
+        imagePath = imageFile.absolutePath
+        return imageFile
     }
 
     @SuppressLint("SimpleDateFormat")
@@ -89,7 +104,7 @@ class EchopointFragment : Fragment() {
 
     private val childForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            Image.image = realUri
+            Singleton.image = realUri
             navController.navigate(R.id.action_echopointFragment_to_sendadminFragment)
         }
 }

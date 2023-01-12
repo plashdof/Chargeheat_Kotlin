@@ -1,14 +1,12 @@
 package com.week2.chargepig.view.echoPoint
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.week2.chargepig.Image
-import com.week2.chargepig.LoginActivity
+import com.week2.chargepig.Singleton
 import com.week2.chargepig.Retrofit
 import com.week2.chargepig.databinding.FragmentSendadminBinding
 import com.week2.chargepig.network.EchopointAPI
@@ -38,10 +36,9 @@ class SendadminFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.ivBackground.setImageURI(Image.image)
-
+        binding.ivBackground.setImageURI(Singleton.image)
         binding.btnComplete.setOnClickListener {
-            val datas = EchopointData(Image.image!!, Image.name.toString() )
+            val datas = EchopointData(Singleton.image.toString(), Singleton.name.toString(), Singleton.id.toString() )
             EchopointRetro.echopoint(datas)
                 .enqueue(object: Callback<ResponseData> {
                     override fun onResponse(
@@ -57,11 +54,7 @@ class SendadminFragment : Fragment() {
                     }
                 })
         }
-
-
     }
-
-
 
     override fun onDestroy() {
         super.onDestroy()
