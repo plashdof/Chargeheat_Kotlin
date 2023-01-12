@@ -1,7 +1,6 @@
 package com.week2.chargepig.view.echoPoint
 
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Base64
@@ -21,8 +20,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.ByteArrayOutputStream
-import java.util.Base64.getEncoder
-
 
 class SendadminFragment : Fragment() {
 
@@ -65,7 +62,7 @@ class SendadminFragment : Fragment() {
 
             Log.d("aaaaa","${datas.toString()}")
             Log.d("aaaaa","${Singleton.id}")
-            EchopointRetro.echopoint("1234", datas)
+            EchopointRetro.echopoint(Singleton.id, datas)
                 .enqueue(object : Callback<ResponseData> {
                     override fun onResponse(
                         call: Call<ResponseData>,
@@ -81,13 +78,6 @@ class SendadminFragment : Fragment() {
         }
 
 
-    }
-
-
-    fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
-        var outputStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.PNG, 80, outputStream)
-        return outputStream.toByteArray()
     }
 
 
