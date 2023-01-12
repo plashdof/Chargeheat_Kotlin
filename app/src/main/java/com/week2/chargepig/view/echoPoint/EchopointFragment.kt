@@ -6,6 +6,7 @@ import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
@@ -62,8 +63,7 @@ class EchopointFragment : Fragment() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         state = false
         Log.d("aaaaaa","openCamera")
-        var imgFile = createImageFile()
-        Log.d("aaaaaa","${imgFile.toString()}")
+
 
         createImageUri(newFileName(), "image/jpg")?.let { uri ->
             realUri = uri
@@ -76,16 +76,6 @@ class EchopointFragment : Fragment() {
         }
     }
 
-    private fun createImageFile(): File {
-        // 사진이 저장될 폴더 있는지 체크
-        var file = File(Environment.getExternalStorageDirectory(), "/path/")
-        if (!file.exists()) file.mkdir()
-
-        var imageName = "fileName.jpeg"
-        var imageFile = File("${Environment.getExternalStorageDirectory().absoluteFile}/path/", "$imageName")
-        imagePath = imageFile.absolutePath
-        return imageFile
-    }
 
     @SuppressLint("SimpleDateFormat")
     private fun newFileName(): String {
@@ -101,6 +91,7 @@ class EchopointFragment : Fragment() {
         values.put(MediaStore.Images.Media.MIME_TYPE, mimeType)
         return Activity.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
     }
+
 
     private val childForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->

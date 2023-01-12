@@ -67,10 +67,6 @@ class HomeFragment : Fragment(){
                 super.onPageSelected(position)
                 indicator.onPageChange(position)
             }
-
-
-
-
         })
 
 

@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity(){
 
         binding.btnLogin.setOnClickListener {
 
+            Singleton.id = ID
             var data = LoginData(ID,PW)
 
             if(ID.isBlank()) {
@@ -91,7 +92,7 @@ class LoginActivity : AppCompatActivity(){
                         ) {
                             Log.d("API결과","${response.body()}")
 
-                            Singleton.id = ID
+
 
                             if(response.body()?.code == 200){
                                 val builder = AlertDialog.Builder(this@LoginActivity)
