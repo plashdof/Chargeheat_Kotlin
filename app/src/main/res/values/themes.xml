@@ -44,5 +44,12 @@
         <item name="android:navigationBarColor">@color/black</item>
     </style>
 
+    <style name="Theme.Chargepig.Splash">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
 
 </resources>
