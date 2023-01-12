@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/poscogray">
-
-
-        <ImageButton
-            android:id="@+id/btn_back"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            android:src="@drawable/back" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:text="회원가입"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <ScrollView
-        android:id="@+id/scrollview"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="회원가입"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,7 +91,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="28dp"
                     android:background="@drawable/shape_et"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/poscoblue"
                     android:textSize="13sp" />
 
@@ -110,7 +120,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/shape_et"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/poscoblue"
                     android:textSize="13sp" />
 
@@ -139,7 +149,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/shape_et"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/poscoblue"
                     android:textSize="13sp" />
 
@@ -191,7 +201,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/shape_et"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/poscoblue"
                     android:textSize="13sp" />
 
@@ -231,29 +241,33 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/shape_et"
-                    android:paddingLeft="5dp"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/poscoblue"
                     android:textSize="13sp" />
 
             </LinearLayout>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="50dp"/>
 
-            <Button
-                android:id="@+id/btn_signup"
-                android:layout_width="120dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="80dp"
-                android:layout_gravity="bottom"
-                android:backgroundTint="@color/poscoblue"
-                android:text="회원가입"
-                android:textColor="@color/white" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
 
         </LinearLayout>
 
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/poscoblue"
+        android:layout_gravity="bottom"
+        android:text="회원가입"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

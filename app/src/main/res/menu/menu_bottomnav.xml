@@ -11,12 +11,12 @@
         android:title="홈"/>
 
 
-    <item
-        android:id="@+id/menu_placeholder"
-        android:title=""
-        android:enabled="false"
-        android:checkable="false"
-        />
+<!--    <item-->
+<!--        android:id="@+id/menu_placeholder"-->
+<!--        android:title=""-->
+<!--        android:enabled="false"-->
+<!--        android:checkable="false"-->
+<!--        />-->
 
     <item
         android:id="@+id/profileFragment"

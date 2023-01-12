@@ -45,7 +45,6 @@
         <activity
             android:name=".SignupActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan|adjustUnspecified"
             android:theme="@style/ModalTheme"/>
 
         <activity

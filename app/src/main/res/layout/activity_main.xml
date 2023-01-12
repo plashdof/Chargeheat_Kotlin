@@ -22,25 +22,15 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/main_bottomnav"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:alpha="0.8"
-            app:itemTextColor="@color/black"
-            app:labelVisibilityMode="labeled"
+            android:layout_height="60dp"
+            android:background="#3e3e3e"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconSize="40dp"
             app:menu="@menu/menu_bottomnav" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
 
-    <ImageButton
-        android:id="@+id/main_btn_qr"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="20dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/qr" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
