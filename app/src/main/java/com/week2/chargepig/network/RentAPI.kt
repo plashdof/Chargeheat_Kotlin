@@ -10,9 +10,8 @@ import retrofit2.http.POST
 
 interface RentAPI {
 
-    @POST("/user/join")
+    @POST("/rent")
     fun rent(
-        @Header("id") id : String? = "",
         @Body params : RentData
     ): Call<ResponseData>
 }

@@ -3,6 +3,7 @@ package com.week2.chargepig.view
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +21,10 @@ import com.journeyapps.barcodescanner.ScanOptions
 import com.week2.chargepig.*
 import com.week2.chargepig.databinding.FragmentHomeBinding
 import com.week2.chargepig.network.ProfileAPI
+import com.week2.chargepig.network.RentAPI
 import com.week2.chargepig.network.models.ProfileData
+import com.week2.chargepig.network.models.RentData
+import com.week2.chargepig.network.models.ResponseData
 import com.week2.chargepig.view.qr.QrActivity
 import com.week2.chargepig.view.qr.SuccessActivity
 import retrofit2.Call
@@ -30,6 +34,8 @@ import retrofit2.Response
 class HomeFragment : Fragment(){
     private lateinit var binding : FragmentHomeBinding
     private lateinit var navController: NavController
+
+    private var RentRetro = Retrofit.getInstance().create(RentAPI::class.java)
 
     private var ProfileRetro = Retrofit.getInstance().create(ProfileAPI::class.java)
 
@@ -89,18 +95,50 @@ class HomeFragment : Fragment(){
 
             //QRCode Scan 성공
             if(intentResult.contents != null){
-                //QRCode Scan result 있는경우
-                if(Singleton.state){
-                    Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(App.context(), MainActivity::class.java)
-                    startActivity(intent)
 
+                val data = RentData(intentResult.contents.toString().substring(22,28))
+
+                if(intentResult.contents.toString().substring(22,28) != "001024"){
+                    Toast.makeText(App.context(), "인식된 손난로가 없습니다", Toast.LENGTH_SHORT).show()
                 }else{
-                    Toast.makeText(App.context(), "일련번호: ${intentResult.contents.toString().substring(22,28)} 대여 성공", Toast.LENGTH_SHORT).show()
-                    Singleton.state = true
-                    val intent = Intent(App.context(), SuccessActivity::class.java)
-                    startActivity(intent)
+                    RentRetro
+                        .rent(data)
+                        .enqueue(object : Callback<ResponseData> {
+                            override fun onResponse(
+                                call: Call<ResponseData>,
+                                response: Response<ResponseData>
+                            ) {
+                                Log.d("API결과", "${response.body()}")
+                                if(response.body()?.code == 300){
+                                    Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
+                                    val intent = Intent(App.context(), MainActivity::class.java)
+                                    startActivity(intent)
+                                }else if(response.body()?.code == 200){
+                                    Toast.makeText(App.context(), "일련번호: 001024 대여 성공", Toast.LENGTH_SHORT).show()
+                                    val intent = Intent(App.context(), SuccessActivity::class.java)
+                                    startActivity(intent)
+                                }
+                            }
+
+                            override fun onFailure(call: Call<ResponseData>, t: Throwable) {
+                                Log.d("API결과", "실패 : $t")
+                            }
+                        })
                 }
+
+                //QRCode Scan result 있는경우
+
+//                if(Singleton.state){
+//                    Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
+//                    val intent = Intent(App.context(), MainActivity::class.java)
+//                    startActivity(intent)
+//
+//                }else{
+//                    Toast.makeText(App.context(), "일련번호: ${intentResult.contents.toString().substring(22,28)} 대여 성공", Toast.LENGTH_SHORT).show()
+//                    Singleton.state = true
+//                    val intent = Intent(App.context(), SuccessActivity::class.java)
+//                    startActivity(intent)
+//                }
                 
 
             }else{

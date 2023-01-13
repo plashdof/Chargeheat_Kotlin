@@ -40,40 +40,55 @@ class NumberinputActivity : AppCompatActivity() {
         binding.btn.setOnClickListener {
             Log.d("aaaaa", "$num")
 
-//            val data = RentData(num)
-//            RentRetro
-//                .rent(Singleton.id ,data)
-//                .enqueue(object : Callback<ResponseData> {
-//                    override fun onResponse(
-//                        call: Call<ResponseData>,
-//                        response: Response<ResponseData>
-//                    ) {
-//                        Log.d("API결과", "${response.body()}")
-//                        Toast.makeText(App.context(),"전송 성공!",Toast.LENGTH_SHORT).show()
-//                    }
-//
-//                    override fun onFailure(call: Call<ResponseData>, t: Throwable) {
-//                        Log.d("API결과", "실패 : $t")
-//                    }
-//                })
+            val data = RentData(num)
 
-            if(num == "001024"){
-                if(Singleton.state){
-                    Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@NumberinputActivity, MainActivity::class.java)
-                    startActivity(intent)
-                }else{
-                    Toast.makeText(App.context(), "일련번호: 001024 대여 성공", Toast.LENGTH_SHORT).show()
-                    Singleton.state = true
-                    val intent = Intent(this@NumberinputActivity, SuccessActivity::class.java)
-                    startActivity(intent)
-                }
-
-            }else{
+            if(num != "001024"){
                 Toast.makeText(this@NumberinputActivity, "인식된 손난로가 없습니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@NumberinputActivity, MainActivity::class.java)
                 startActivity(intent)
+            }else{
+                RentRetro
+                    .rent(data)
+                    .enqueue(object : Callback<ResponseData> {
+                        override fun onResponse(
+                            call: Call<ResponseData>,
+                            response: Response<ResponseData>
+                        ) {
+                            Log.d("API결과", "${response.body()}")
+                            if(response.body()?.code == 300){
+                                Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this@NumberinputActivity, MainActivity::class.java)
+                                startActivity(intent)
+                            }else if(response.body()?.code == 200){
+                                Toast.makeText(App.context(), "일련번호: 001024 대여 성공", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this@NumberinputActivity, SuccessActivity::class.java)
+                                startActivity(intent)
+                            }
+                        }
+
+                        override fun onFailure(call: Call<ResponseData>, t: Throwable) {
+                            Log.d("API결과", "실패 : $t")
+                        }
+                    })
             }
+
+//            if(num == "001024"){
+//                if(Singleton.state){
+//                    Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
+//                    val intent = Intent(this@NumberinputActivity, MainActivity::class.java)
+//                    startActivity(intent)
+//                }else{
+//                    Toast.makeText(App.context(), "일련번호: 001024 대여 성공", Toast.LENGTH_SHORT).show()
+//                    Singleton.state = true
+//                    val intent = Intent(this@NumberinputActivity, SuccessActivity::class.java)
+//                    startActivity(intent)
+//                }
+//
+//            }else{
+//                Toast.makeText(this@NumberinputActivity, "인식된 손난로가 없습니다", Toast.LENGTH_SHORT).show()
+//                val intent = Intent(this@NumberinputActivity, MainActivity::class.java)
+//                startActivity(intent)
+//            }
         }
 
     }
