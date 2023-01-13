@@ -79,35 +79,6 @@ class HomeFragment : Fragment(){
             activityResult.launch(integrator.createScanIntent()) // 스캔
         }
 
-//        val adapter = HomeVPAdapter(datas)
-//        binding.viewpager.adapter = adapter
-//
-//        // indicator 생성, viewpager 과 연결
-//
-//        val indicator = binding.indicator
-//        indicator.noOfPages = 3
-//
-//        binding.viewpager.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
-//
-//            override fun onPageScrolled(
-//                position: Int,
-//                positionOffset: Float,
-//                positionOffsetPixels: Int
-//            ) {
-//                super.onPageScrolled(position, positionOffset, positionOffsetPixels)
-//            }
-//
-//            override fun onPageScrollStateChanged(state: Int) {
-//                super.onPageScrollStateChanged(state)
-//            }
-//
-//            override fun onPageSelected(position: Int) {
-//                super.onPageSelected(position)
-//                indicator.onPageChange(position)
-//            }
-//        })
-
-
     }
 
     private val activityResult = this.registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
@@ -119,13 +90,22 @@ class HomeFragment : Fragment(){
             //QRCode Scan 성공
             if(intentResult.contents != null){
                 //QRCode Scan result 있는경우
-                Toast.makeText(App.context(), "인식된 QR-data: ${intentResult.contents}", Toast.LENGTH_SHORT).show()
+                if(Singleton.state){
+                    Toast.makeText(App.context(), "이미 대여중인 손난로입니다", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(App.context(), MainActivity::class.java)
+                    startActivity(intent)
 
-                val intent = Intent(App.context(), SuccessActivity::class.java)
-                startActivity(intent)
+                }else{
+                    Toast.makeText(App.context(), "일련번호: ${intentResult.contents.toString().substring(22,28)} 대여 성공", Toast.LENGTH_SHORT).show()
+                    Singleton.state = true
+                    val intent = Intent(App.context(), SuccessActivity::class.java)
+                    startActivity(intent)
+                }
+                
+
             }else{
                 //QRCode Scan result 없는경우
-                Toast.makeText(App.context(), "인식된 QR-data가 없습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(App.context(), "인식된 손난로가 없습니다.", Toast.LENGTH_SHORT).show()
             }
         }else{
             //QRCode Scan 실패

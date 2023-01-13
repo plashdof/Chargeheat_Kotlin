@@ -7,4 +7,5 @@ object Singleton {
     var image : Uri? = null
     var name : String = ""
     var id : String = ""
+    var state : Boolean = false
 }
