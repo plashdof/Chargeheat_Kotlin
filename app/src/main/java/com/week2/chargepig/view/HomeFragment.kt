@@ -21,8 +21,6 @@ import com.week2.chargepig.*
 import com.week2.chargepig.databinding.FragmentHomeBinding
 import com.week2.chargepig.network.ProfileAPI
 import com.week2.chargepig.network.models.ProfileData
-import com.week2.chargepig.network.models.ResponseData
-import com.week2.chargepig.view.adapter.HomeVPAdapter
 import com.week2.chargepig.view.qr.QrActivity
 import com.week2.chargepig.view.qr.SuccessActivity
 import retrofit2.Call
@@ -57,19 +55,15 @@ class HomeFragment : Fragment(){
             navController.navigate(R.id.action_homeFragment_to_echopointFragment)
         }
 
-        binding.btnBluetooth.setOnClickListener {
-            val intent = Intent(App.context(), BluetoothActivity::class.java)
-            startActivity(intent)
-        }
 
-//        ProfileRetro.getprofile(Singleton.id)
-//            .enqueue(object: Callback<ProfileData>{
-//                override fun onResponse(call: Call<ProfileData>, response: Response<ProfileData>) {
-//                    binding.tvEchopoint.text = "${response.body()!!.point.toString()}P"
-//                }
-//
-//                override fun onFailure(call: Call<ProfileData>, t: Throwable) {}
-//            })
+        ProfileRetro.getprofile(Singleton.id)
+            .enqueue(object: Callback<ProfileData> {
+                override fun onResponse(call: Call<ProfileData>, response: Response<ProfileData>) {
+                    binding.tvEchopoint.text = "${response.body()!!.point.toString()}P"
+                }
+
+                override fun onFailure(call: Call<ProfileData>, t: Throwable) {}
+            })
 
         binding.btnQr.setOnClickListener {
 

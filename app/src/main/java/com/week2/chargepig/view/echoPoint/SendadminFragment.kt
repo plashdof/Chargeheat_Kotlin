@@ -1,5 +1,7 @@
 package com.week2.chargepig.view.echoPoint
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
@@ -8,8 +10,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.week2.chargepig.App
+import com.week2.chargepig.R
 import com.week2.chargepig.Retrofit
 import com.week2.chargepig.Singleton
 import com.week2.chargepig.databinding.FragmentSendadminBinding
@@ -28,6 +35,8 @@ class SendadminFragment : Fragment() {
 
     private val EchopointRetro = Retrofit.getInstance().create(EchopointAPI::class.java)
 
+    private lateinit var navController: NavController
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,6 +50,7 @@ class SendadminFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.ivBackground.setImageURI(Singleton.image)
+        navController = Navigation.findNavController(view)
         binding.btnComplete.setOnClickListener {
 
 
@@ -69,6 +79,9 @@ class SendadminFragment : Fragment() {
                         response: Response<ResponseData>
                     ) {
                         Log.d("API결과", "${response.body()}")
+
+                        Toast.makeText(App.context(),"전송 성공!",Toast.LENGTH_SHORT).show()
+                        navController.navigate(R.id.action_sendadminFragment_to_homeFragment)
                     }
 
                     override fun onFailure(call: Call<ResponseData>, t: Throwable) {

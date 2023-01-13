@@ -33,6 +33,7 @@
         android:backgroundTint="@color/poscoblue"/>
 
     <Button
+        android:id="@+id/btn_bill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="전자영수증 사용하기"
@@ -42,6 +43,7 @@
         android:backgroundTint="@color/poscoblue"/>
 
     <Button
+        android:id="@+id/btn_bus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="대중교통 이용하기"
@@ -50,6 +52,7 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="@color/poscoblue"/>
     <Button
+        android:id="@+id/btn_monitor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="모니터 밝기 줄이기"
@@ -59,6 +62,7 @@
         android:backgroundTint="@color/poscoblue"/>
 
     <Button
+        android:id="@+id/btn_car"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="무공해차 인증하기"
@@ -68,6 +72,7 @@
         android:backgroundTint="@color/poscoblue"/>
 
     <Button
+        android:id="@+id/btn_energy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="에너지효율 인증하기"

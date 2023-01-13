@@ -1,4 +1,4 @@
-package com.week2.chargepig
+package com.week2.chargepig.view.intro
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -8,15 +8,14 @@ import android.text.TextWatcher
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.week2.chargepig.MainActivity
+import com.week2.chargepig.Retrofit
+import com.week2.chargepig.Singleton
 import com.week2.chargepig.databinding.ActivityLoginBinding
 import com.week2.chargepig.network.LoginAPI
 import com.week2.chargepig.network.TestAPI
 import com.week2.chargepig.network.models.LoginData
 import com.week2.chargepig.network.models.ResponseData
-import com.week2.chargepig.network.models.TestData
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

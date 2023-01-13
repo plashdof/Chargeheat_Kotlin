@@ -41,5 +41,9 @@
     <fragment
         android:id="@+id/sendadminFragment"
         android:name="com.week2.chargepig.view.echoPoint.SendadminFragment"
-        android:label="SendadminFragment" />
+        android:label="SendadminFragment" >
+        <action
+            android:id="@+id/action_sendadminFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

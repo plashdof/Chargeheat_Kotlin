@@ -57,6 +57,32 @@ class EchopointFragment : Fragment() {
             Singleton.name = "Tumbler"
             openCamera()
         }
+
+        binding.btnBill.setOnClickListener {
+            Singleton.name = "Bill"
+            openCamera()
+        }
+
+        binding.btnBus.setOnClickListener {
+            Singleton.name = "Bus"
+            openCamera()
+        }
+
+        binding.btnCar.setOnClickListener {
+            Singleton.name = "Car"
+            openCamera()
+        }
+
+        binding.btnEnergy.setOnClickListener {
+            Singleton.name = "Energy"
+            openCamera()
+        }
+
+        binding.btnMonitor.setOnClickListener {
+            Singleton.name = "Monitor"
+            openCamera()
+        }
+
     }
 
     private fun openCamera() {
