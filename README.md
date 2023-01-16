@@ -4,7 +4,7 @@
 
 ## (Android 앱 개발 / NodeJS 서버 개발 담당)
 
- <img src ="https://user-images.githubusercontent.com/86242930/212768731-274624cf-8ca9-418a-a69b-8080642ef511.jpg" width="150" height="300"/>
+ <img src ="https://user-images.githubusercontent.com/86242930/212768731-274624cf-8ca9-418a-a69b-8080642ef511.jpg" width="400" height="200"/>
 
 ### 개요
 
@@ -40,21 +40,21 @@ https://user-images.githubusercontent.com/86242930/212768761-8ebf0c55-ee2c-4bd3-
 
 **→ Splash / Login Page**
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768773-e65bc4ac-8410-49c4-b288-3c81ab18005a.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768773-e65bc4ac-8410-49c4-b288-3c81ab18005a.jpg" width="200" height="400"/>
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768783-c7213c07-54ed-4c83-9dbe-8443f492ab5a.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768783-c7213c07-54ed-4c83-9dbe-8443f492ab5a.jpg" width="200" height="400"/>
 
 **→ Signup Page**
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768799-2b69f442-c086-4274-86da-522d9f82233a.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768799-2b69f442-c086-4274-86da-522d9f82233a.jpg" width="200" height="400"/>
 
 **→ HomePage** 
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768809-80b85147-479e-4d31-bde6-dccd7e341762.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768809-80b85147-479e-4d31-bde6-dccd7e341762.jpg" width="200" height="400"/>
 
 **→ ProfilePage**
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768819-f62fe4ab-8fe2-4504-85ec-3a00f7d6d1eb.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768819-f62fe4ab-8fe2-4504-85ec-3a00f7d6d1eb.jpg" width="200" height="400"/>
 
 **→ EcoPointPage** 
 
@@ -62,9 +62,9 @@ https://user-images.githubusercontent.com/86242930/212768761-8ebf0c55-ee2c-4bd3-
 - 서버에서 admin page 에 전송하여, 포인트 적립 승인/거절 입력
 - 포인트 적립 승인여부에 따라 포인트 변경
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768823-af09b3b1-89f3-45ed-9871-479ad5f4027f.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768823-af09b3b1-89f3-45ed-9871-479ad5f4027f.jpg" width="200" height="400"/>
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768834-47a11518-d9f1-4e7d-9b95-134aa1ffa728.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768834-47a11518-d9f1-4e7d-9b95-134aa1ffa728.jpg" width="200" height="400"/>
 
 **→ QR Page**  
 
@@ -73,8 +73,8 @@ https://user-images.githubusercontent.com/86242930/212768761-8ebf0c55-ee2c-4bd3-
 - 서버에서 아두이노로 대여사실 전송.
 - 아두이노가 손난로 거치대 작동시켜서, 사용자에게 손난로를 밀어줌
 
-<img src ="https://user-images.githubusercontent.com/86242930/212769054-05fa3624-4267-4b83-bc51-a4548aec1821.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212769054-05fa3624-4267-4b83-bc51-a4548aec1821.jpg" width="200" height="400"/>
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768848-3e764c5b-db2b-4137-8553-55d31ff59ce0.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768848-3e764c5b-db2b-4137-8553-55d31ff59ce0.jpg" width="200" height="400"/>
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768863-5b2bc2e8-c97b-47db-a899-fc7296c102e1.jpg" width="150" height="300"/>
+<img src ="https://user-images.githubusercontent.com/86242930/212768863-5b2bc2e8-c97b-47db-a899-fc7296c102e1.jpg" width="200" height="400"/>
