@@ -4,7 +4,7 @@
 
 ## (Android 앱 개발 / NodeJS 서버 개발 담당)
 
- <img src ="https://user-images.githubusercontent.com/86242930/212768731-274624cf-8ca9-418a-a69b-8080642ef511.jpg" width="400" height="200"/>
+ <img src ="https://user-images.githubusercontent.com/86242930/212768731-274624cf-8ca9-418a-a69b-8080642ef511.jpg" width="600" height="400"/>
 
 ### 개요
 
