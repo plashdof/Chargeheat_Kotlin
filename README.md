@@ -50,11 +50,11 @@ https://user-images.githubusercontent.com/86242930/212768761-8ebf0c55-ee2c-4bd3-
 
 <p align="center">
 
- <img src ="https://user-images.githubusercontent.com/86242930/212768773-e65bc4ac-8410-49c4-b288-3c81ab18005a.jpg" width="200" height="400"/>
+ <img src ="https://user-images.githubusercontent.com/86242930/212768773-e65bc4ac-8410-49c4-b288-3c81ab18005a.jpg" width="30%" />
 
- <img src ="https://user-images.githubusercontent.com/86242930/212768783-c7213c07-54ed-4c83-9dbe-8443f492ab5a.jpg" width="200" height="400"/>
+ <img src ="https://user-images.githubusercontent.com/86242930/212768783-c7213c07-54ed-4c83-9dbe-8443f492ab5a.jpg" width="30%" />
 
- <img src ="https://user-images.githubusercontent.com/86242930/212768799-2b69f442-c086-4274-86da-522d9f82233a.jpg" width="200" height="400"/>
+ <img src ="https://user-images.githubusercontent.com/86242930/212768799-2b69f442-c086-4274-86da-522d9f82233a.jpg" width="30%" />
 
 </p>
 
