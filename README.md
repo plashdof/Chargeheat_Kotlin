@@ -38,13 +38,9 @@
 
 ## 구동영상
 
----
-
 https://user-images.githubusercontent.com/86242930/212768761-8ebf0c55-ee2c-4bd3-8207-bc7e1f82bbb6.mp4
 
 ## 스크린샷
-
----
 
 **→ Splash / Login Page / Signup Page**
 
