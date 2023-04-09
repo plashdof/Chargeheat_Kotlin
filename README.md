@@ -2,14 +2,13 @@
 
 ## 2022 이노씽크 MakerTon / Posco 부문 프로젝트
 
-## (Android 앱 개발 / NodeJS 서버 개발 담당)
-
  <img src ="https://user-images.githubusercontent.com/86242930/212768731-274624cf-8ca9-418a-a69b-8080642ef511.jpg" width="800" height="600"/>
 
 ### 개요
 
 - 탄소절감을 위한 아이디어 기반
 - Posco 사원 / The Sharp 아파트 주민이 이용할수있는 하드웨이 및 소프트웨어 개발
+- 역할 : Android 앱 개발 / NodeJS 서버 개발 담당
 
 ### 아이디어
 
