@@ -4,13 +4,15 @@
 
  <img src ="https://user-images.githubusercontent.com/86242930/212768731-274624cf-8ca9-418a-a69b-8080642ef511.jpg" width="800" height="600"/>
 
-### 개요
+## 개요
 
 - 탄소절감을 위한 아이디어 기반
 - Posco 사원 / The Sharp 아파트 주민이 이용할수있는 하드웨이 및 소프트웨어 개발
-- 역할 : Android 앱 개발 / NodeJS 서버 개발 담당
+- 팀구성 : 안드로이드 1 / 서버 1 / HW 개발자 2 / 기획자 1 / 디자이너 1
+- 맡은역할 :  Android 앱개발 / Node.js 서버 개발
+- 개발기간 : 2023.01.03 ~ 2023.01.13 ( 약 10일간 )
 
-### 아이디어
+## 아이디어
 
 - 일회용 손난로의 낭비를 막기위해 재사용가능한 전기손난로 착안
 - 전기손난로를 대여하기 위한 에코포인트 제도 착안
@@ -18,7 +20,7 @@
     - 쌓은 포인트로 다시 친환경적 활동을 하는 선순환적 구조 제안
 - 에코포인트 적립을 관장하는 admin page 관리자대신, 추후에 AI가 도입되어 빅데이터 적립 가능성도 제시
 
-### 설계
+## 설계
 
 - HW : 아두이노를 이용한 사물인터넷 스테이션 대여 서비스.
 - SW :  손난로 대여 / 에코포인트 적립 Android 앱 개발
@@ -27,31 +29,41 @@
     - 스테이션 위치찾기 기능
     - 로그인/회원가입/프로필 조회 기능
 
-### 개발기간
+## After Project
 
-- 2023.01.03 ~ 2023.01.13 (약 10일간)
+- 앱 ↔ 서버 ↔ 웹 간 이미지 송수신 방법을 알수 있었다.
+- 써드파티 라이브러리를 이용한 QR 인식 방법을 습득하였다
+- HW 제품의 확장성으로 앱을 어떻게 활용할지 고민해보는 좋은 계기였다
 
-### 구동영상
+
+## 구동영상
+
+---
 
 https://user-images.githubusercontent.com/86242930/212768761-8ebf0c55-ee2c-4bd3-8207-bc7e1f82bbb6.mp4
 
-### 화면구현
+## 스크린샷
 
-**→ Splash / Login Page**
+---
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768773-e65bc4ac-8410-49c4-b288-3c81ab18005a.jpg" width="200" height="400"/>
+**→ Splash / Login Page / Signup Page**
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768783-c7213c07-54ed-4c83-9dbe-8443f492ab5a.jpg" width="200" height="400"/>
+<p align="center">
 
-**→ Signup Page**
+ <img src ="https://user-images.githubusercontent.com/86242930/212768773-e65bc4ac-8410-49c4-b288-3c81ab18005a.jpg" width="200" height="400"/>
 
-<img src ="https://user-images.githubusercontent.com/86242930/212768799-2b69f442-c086-4274-86da-522d9f82233a.jpg" width="200" height="400"/>
+ <img src ="https://user-images.githubusercontent.com/86242930/212768783-c7213c07-54ed-4c83-9dbe-8443f492ab5a.jpg" width="200" height="400"/>
 
-**→ HomePage** 
+ <img src ="https://user-images.githubusercontent.com/86242930/212768799-2b69f442-c086-4274-86da-522d9f82233a.jpg" width="200" height="400"/>
+
+</p>
+
+
+
+**→ MainPage**
 
 <img src ="https://user-images.githubusercontent.com/86242930/212768809-80b85147-479e-4d31-bde6-dccd7e341762.jpg" width="200" height="400"/>
 
-**→ ProfilePage**
 
 <img src ="https://user-images.githubusercontent.com/86242930/212768819-f62fe4ab-8fe2-4504-85ec-3a00f7d6d1eb.jpg" width="200" height="400"/>
 
